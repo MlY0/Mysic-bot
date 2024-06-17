@@ -1,12 +1,12 @@
 module.exports = {
     app: {
-        token: 'xxx',
-        playing: 'by the Community ❤️',
+        token: '',
+        playing: '새벽5시부터 6시까지는 작동하지 않아요',
         global: true,
-        guild: 'xxx',
+        guild: '', 
         extraMessages: false,
         loopMessage: false,
-        lang: 'en',
+        lang: 'ko',
         enableEmojis: false,
     },
 

@@ -3,7 +3,7 @@ const { ApplicationCommandOptionType, EmbedBuilder } = require('discord.js');
 const { Translate } = require('../../process_tools');
 
 module.exports = {
-    name: 'play',
+    name: '재생',
     description:("Play a song!"),
     voiceChannel: true,
     options: [
