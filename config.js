@@ -28,7 +28,7 @@ module.exports = {
         },
         Translate_Timeout: 10000,
         maxVol: 100,
-        spotifyBridge: true,
+        spotifyBridge: false,
         volume: 75,
         leaveOnEmpty: true,
         leaveOnEmptyCooldown: 30000,

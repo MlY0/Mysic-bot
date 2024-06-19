@@ -21,7 +21,7 @@ module.exports = {
         const song = inter.options.getString('song');
         const res = await player.search(song, {
             requestedBy: inter.member,
-            searchEngine: QueryType.AUTO
+            searchEngine: QueryType.YOUTUBE_SEARCH
         });
 
         let defaultEmbed = new EmbedBuilder().setColor('#2f3136');
@@ -32,7 +32,7 @@ module.exports = {
         }
 
         try {
-            const { track } = await player.play(inter.member.voice.channel, song, {
+            const { track } = await player.play(inter.member.voice.channel, res.tracks[0], {
                 nodeOptions: {
                     metadata: {
                         channel: inter.channel
