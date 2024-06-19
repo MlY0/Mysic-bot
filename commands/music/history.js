@@ -4,7 +4,7 @@ const { Translate } = require('../../process_tools');
 
 module.exports = {
     name: '대기열',
-    description:('대기열 기록 보기'),
+    description:('대기열 목록을 보여줍니다'),
     voiceChannel: false,
 
     async execute({ inter }) {

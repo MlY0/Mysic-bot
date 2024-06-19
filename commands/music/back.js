@@ -4,7 +4,7 @@ const { Translate } = require('../../process_tools');
 
 module.exports = {
     name: '이전곡',
-    description:("재생된 마지막 곡으로 돌아가기"),
+    description:("재생된 마지막 곡으로 돌아갑니다"),
     voiceChannel: true,
 
     async execute({ inter }) {

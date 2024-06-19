@@ -53,6 +53,6 @@ module.exports = (queue, track) => {
       skip,
       lyrics
     );
-    queue.metadata.channel.send({ embeds: [embed], components: [row1] });
+    queue.metadata.channel.send({ embeds: [embed]});
   })();
 };

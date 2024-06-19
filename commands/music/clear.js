@@ -4,7 +4,7 @@ const { Translate } = require('../../process_tools');
 
 module.exports = {
     name: '지우기',
-    description:('대기열에 있는 모든 음악 지우기'),
+    description:('대기열에 있는 모든 음악을 지웁니다'),
     voiceChannel: true,
 
     async execute({ inter }) {
