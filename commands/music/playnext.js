@@ -3,13 +3,13 @@ const { QueryType, useMainPlayer, useQueue } = require('discord-player');
 const { Translate } = require('../../process_tools');
 
 module.exports = {
-    name: 'playnext',
-    description:("Play a song right after this one"),
+    name: '다음음악추가',
+    description:("이 노래가 끝나면 바로 재생합니다"),
     voiceChannel: true,
     options: [
         {
-            name: 'song',
-            description:('The song you want to play next'),
+            name: '음악',
+            description:('다음에 재생하고 싶은 노래'),
             type: ApplicationCommandOptionType.String,
             required: true,
         }
@@ -21,7 +21,7 @@ module.exports = {
 
         if (!queue?.isPlaying()) return inter.editReply({ content: await Translate(`No music currently playing <${inter.member}>... try again ? <❌>`) });
 
-        const song = inter.options.getString('song');
+        const song = inter.options.getString('음악');
         const res = await player.search(song, {
             requestedBy: inter.member,
             searchEngine: QueryType.AUTO

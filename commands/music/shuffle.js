@@ -3,8 +3,8 @@ const { useQueue } = require('discord-player');
 const { Translate } = require('../../process_tools');
 
 module.exports = {
-    name: 'shuffle',
-    description:('Shuffle the queue'),
+    name: '섞기',
+    description:('재생목록을 랜덤하게 섞습니다.'),
     voiceChannel: true,
 
     async execute({ inter }) {

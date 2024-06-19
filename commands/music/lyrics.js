@@ -3,8 +3,8 @@ const { useMainPlayer, useQueue } = require('discord-player');
 const { Translate } = require('../../process_tools');
 
 module.exports = {
-    name: 'lyrics',
-    description:('Get the lyrics for the current track'),
+    name: '가사',
+    description:('현재 트랙의 가사를 가져옵니다'),
     voiceChannel: true,
 
     async execute({ inter }) {

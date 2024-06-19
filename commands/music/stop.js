@@ -3,8 +3,8 @@ const { useQueue } = require('discord-player');
 const { Translate } = require('../../process_tools');
 
 module.exports = {
-    name: 'stop',
-    description:('Stop the track'),
+    name: '멈춤',
+    description:('재생중인 곡을 멈춥니다'),
     voiceChannel: true,
 
     async execute({ inter }) {

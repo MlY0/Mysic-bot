@@ -4,13 +4,13 @@ const { useQueue } = require('discord-player');
 const { Translate } = require('../../process_tools');
 
 module.exports = {
-    name: 'volume',
-    description:('Adjust the volume'),
+    name: '볼륨',
+    description:('음량을 조절합니다'),
     voiceChannel: true,
     options: [
         {
-            name: 'volume',
-            description:('The new volume'),
+            name: '볼륨',
+            description:('The new 볼륨'),
             type: ApplicationCommandOptionType.Number,
             required: true,
             minValue: 1,
@@ -22,7 +22,7 @@ module.exports = {
         const queue = useQueue(inter.guild);
         if (!queue?.isPlaying()) return inter.editReply({ content: await Translate(`No music currently playing <${inter.member}>... try again ? <❌>`) });
 
-        const vol = inter.options.getNumber('volume');
+        const vol = inter.options.getNumber('볼륨');
         if (queue.node.volume === vol) return inter.editReply({ content: await Translate(`The new volume is already the current one <${inter.member}>... try again ? <❌>`) });
 
         const success = queue.node.setVolume(vol);

@@ -3,8 +3,8 @@ const { useQueue } = require('discord-player');
 const { Translate } = require('../../process_tools');
 
 module.exports = {
-    name: 'queue',
-    description:('Get the songs in the queue'),
+    name: '대기열가져오기',
+    description:('대기열에 있는 노래 가져오기'),
     voiceChannel: true,
 
     async execute({ client, inter }) {

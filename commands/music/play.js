@@ -4,12 +4,12 @@ const { Translate } = require('../../process_tools');
 
 module.exports = {
     name: '재생',
-    description:("Play a song!"),
+    description:("음악을 재생합니다"),
     voiceChannel: true,
     options: [
         {
-            name: 'song',
-            description:('The song you want to play'),
+            name: '음악',
+            description:('재생하고 싶은 음악을 검색합니다'),
             type: ApplicationCommandOptionType.String,
             required: true,
         }
@@ -18,7 +18,7 @@ module.exports = {
     async execute({ inter, client }) {
         const player = useMainPlayer();
 
-        const song = inter.options.getString('song');
+        const song = inter.options.getString('음악');
         const res = await player.search(song, {
             requestedBy: inter.member,
             searchEngine: QueryType.YOUTUBE_SEARCH

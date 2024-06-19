@@ -3,8 +3,8 @@ const { useQueue } = require('discord-player');
 const { Translate } = require('../../process_tools');
 
 module.exports = {
-    name: 'save',
-    description:('Save the current track!'),
+    name: '저장',
+    description:('현재 트랙을 저장합니다'),
     voiceChannel: true,
 
     async execute({ inter }) {

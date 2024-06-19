@@ -3,8 +3,8 @@ const { useQueue } = require('discord-player');
 const { Translate } = require('../../process_tools');
 
 module.exports = {
-    name: 'nowplaying',
-    description: 'See what song is currently playing!',
+    name: '재생정보',
+    description: '현재 재생 중인 노래의 정보',
     voiceChannel: true,
 
     async execute({ inter }) {
@@ -12,7 +12,7 @@ module.exports = {
         if (!queue?.isPlaying()) return inter.editReply({ content: await Translate(`No music currently playing <${inter.member}>... try again ? <❌>`) });
 
         const track = queue.currentTrack;
-        const methods = ['disabled', 'track', 'queue'];
+        const methods = ['비활성화', '트랙', '대기열가져오기'];
         const timestamp = track.duration;
         const trackDuration = timestamp.progress == 'Infinity' ? 'infinity (live)' : track.duration;
         const progress = queue.node.createProgressBar();
@@ -47,8 +47,8 @@ module.exports = {
             .setStyle('Primary');
 
         const loop = new ButtonBuilder()
-            .setLabel(EmojiState ? emojis.loop : ('Loop'))
-            .setCustomId('loop')
+            .setLabel(EmojiState ? emojis.loop : ('반복재생'))
+            .setCustomId('반복재생')
             .setStyle('Danger');
 
         const resumepause = new ButtonBuilder()

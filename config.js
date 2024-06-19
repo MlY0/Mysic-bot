@@ -11,13 +11,13 @@ module.exports = {
     },
 
     emojis:{
-        'back': '⏪',
-        'skip': '⏩',
+        '이전곡': '⏪',
+        '스킵': '⏩',
         'ResumePause': '⏯️',
         'savetrack': '💾',
         'volumeUp': '🔊',
         'volumeDown': '🔉',
-        'loop': '🔁',
+        '반복재생': '🔁',
     },
 
     opt: {

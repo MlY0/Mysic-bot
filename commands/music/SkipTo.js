@@ -3,18 +3,18 @@ const { useQueue } = require('discord-player');
 const { Translate } = require('../../process_tools');
 
 module.exports = {
-    name: 'skipto',
-    description:("Skips to particular track in queue"),
+    name: '대기열건너뛰기',
+    description:("대기열의 특정 트랙으로 건너뜁니다"),
     voiceChannel: true,
     options: [
         {
-            name: 'song',
+            name: '음악',
             description:('The name/url of the track you want to skip to'),
             type: ApplicationCommandOptionType.String,
             required: false,
         },
         {
-            name: 'number',
+            name: '번호',
             description:('The place in the queue the song is in'),
             type: ApplicationCommandOptionType.Number,
             required: false,
@@ -25,8 +25,8 @@ module.exports = {
         const queue = useQueue(inter.guild);
         if (!queue?.isPlaying()) return inter.editReply({ content: await Translate(`No music currently playing <${inter.member}>... try again ? <❌>`) });
 
-        const track = inter.options.getString('song');
-        const number = inter.options.getNumber('number')
+        const track = inter.options.getString('음악');
+        const number = inter.options.getNumber('번호')
         if (!track && !number) return inter.editReply({ content: await Translate(`You have to use one of the options to jump to a song <${inter.member}>... try again ? <❌>`) });
 
         let trackName;

@@ -3,8 +3,8 @@ const { useQueue } = require('discord-player');
 const { Translate } = require('../../process_tools');
 
 module.exports = {
-    name: 'back',
-    description:("Go back to the last song played"),
+    name: '이전곡',
+    description:("재생된 마지막 곡으로 돌아가기"),
     voiceChannel: true,
 
     async execute({ inter }) {

@@ -22,13 +22,13 @@ module.exports = (queue, track) => {
       .setColor("#2f3136");
 
     const back = new ButtonBuilder()
-      .setLabel(EmojiState ? emojis.back : ('Back'))
-      .setCustomId('back')
+      .setLabel(EmojiState ? emojis.back : ('이전곡'))
+      .setCustomId('이전곡')
       .setStyle('Primary');
 
     const skip = new ButtonBuilder()
-      .setLabel(EmojiState ? emojis.skip : ('Skip'))
-      .setCustomId('skip')
+      .setLabel(EmojiState ? emojis.skip : ('스킵'))
+      .setCustomId('스킵')
       .setStyle('Primary');
 
     const resumepause = new ButtonBuilder()
@@ -37,8 +37,8 @@ module.exports = (queue, track) => {
       .setStyle('Danger');
 
     const loop = new ButtonBuilder()
-      .setLabel(EmojiState ? emojis.loop : ('Loop'))
-      .setCustomId('loop')
+      .setLabel(EmojiState ? emojis.loop : ('반복재생'))
+      .setCustomId('반복재생')
       .setStyle('Danger');
 
     const lyrics = new ButtonBuilder()

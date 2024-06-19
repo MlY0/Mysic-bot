@@ -3,20 +3,20 @@ const { ApplicationCommandOptionType, EmbedBuilder } = require('discord.js');
 const { Translate } = require('../../process_tools');
 
 module.exports = {
-    name: 'loop',
-    description:('Toggle the looping of song\'s or the whole queue'),
+    name: '반복재생',
+    description:('현재 재생중인 음악을 반복재생합니다.'),
     voiceChannel: true,
     options: [
         {
-            name: 'action',
-            description:('What action you want to preform on the loop'),
+            name: '액션',
+            description:('반복재생에서 어쩐 액션을 수행할까요?'),
             type: ApplicationCommandOptionType.String,
             required: true,
             choices: [
-                { name: 'Queue', value: 'enable_loop_queue' },
-                { name: 'Disable', value: 'disable_loop' },
-                { name: 'Song', value: 'enable_loop_song' },
-                { name: 'Autoplay', value: 'enable_autoplay' },
+                { name: '대기열가져오기', value: 'enable_loop_queue' },
+                { name: '사용하지 않음', value: 'disable_loop' },
+                { name: '음악', value: 'enable_loop_song' },
+                { name: '자동재생', value: 'enable_autoplay' },
             ],
         }
     ],

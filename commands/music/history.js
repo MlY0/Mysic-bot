@@ -3,8 +3,8 @@ const { useQueue } = require('discord-player');
 const { Translate } = require('../../process_tools');
 
 module.exports = {
-    name: 'history',
-    description:('See the history of the queue'),
+    name: '대기열',
+    description:('대기열 기록 보기'),
     voiceChannel: false,
 
     async execute({ inter }) {

@@ -5,7 +5,7 @@ module.exports = async ({ client, inter, queue }) => {
     if (!queue?.isPlaying()) return inter.editReply({ content: await Translate(`No music currently playing... try again ? <❌>`) });
 
     const track = queue.currentTrack;
-    const methods = ['disabled', 'track', 'queue'];
+    const methods = ['비활성화', '트랙', '대기열가져오기'];
     const timestamp = track.duration;
     const trackDuration = timestamp.progress == 'Infinity' ? 'infinity (live)' : track.duration;
     const progress = queue.node.createProgressBar();

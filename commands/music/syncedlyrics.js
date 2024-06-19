@@ -2,8 +2,8 @@ const { useMainPlayer, useQueue } = require('discord-player');
 const { Translate } = require('../../process_tools');
 
 module.exports = {
-    name: 'syncedlyrics',
-    description:('Syncronize the lyrics with the song'),
+    name: '동기화',
+    description:('노래와 가사를 동기화합니다'),
     voiceChannel: true,
 
     async execute({ inter }) {

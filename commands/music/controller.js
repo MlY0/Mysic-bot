@@ -2,8 +2,8 @@ const { ApplicationCommandOptionType, ActionRowBuilder, ButtonBuilder, ChannelTy
 const { Translate } = require('../../process_tools');
 
 module.exports = {
-    name: 'controller',
-    description:("Send music controller to a channel"),
+    name: '컨트롤러',
+    description:("채널에 음악 컨트롤러 보내기"),
     voiceChannel: false,
     permissions: PermissionsBitField.Flags.ManageMessages,
     options: [
@@ -34,13 +34,13 @@ module.exports = {
         emojis ? EmojiState = EmojiState : EmojiState = false;
 
         const back = new ButtonBuilder()
-            .setLabel(EmojiState ? emojis.back : ('Back'))
-            .setCustomId('back')
+            .setLabel(EmojiState ? emojis.back : ('이전곡'))
+            .setCustomId('이전곡')
             .setStyle('Primary');
 
         const skip = new ButtonBuilder()
-            .setLabel(EmojiState ? emojis.skip : ('Skip'))
-            .setCustomId('skip')
+            .setLabel(EmojiState ? emojis.skip : ('스킵'))
+            .setCustomId('스킵')
             .setStyle('Primary');
 
         const resumepause = new ButtonBuilder()
@@ -49,7 +49,7 @@ module.exports = {
             .setStyle('Danger');
 
         const save = new ButtonBuilder()
-            .setLabel(EmojiState ? emojis.savetrack : ('Save'))
+            .setLabel(EmojiState ? emojis.savetrack : ('저장'))
             .setCustomId('savetrack')
             .setStyle('Success');
 
@@ -64,33 +64,33 @@ module.exports = {
             .setStyle('Primary');
 
         const loop = new ButtonBuilder()
-            .setLabel(EmojiState ? emojis.loop : ('Loop'))
-            .setCustomId('loop')
+            .setLabel(EmojiState ? emojis.loop : ('반복재생'))
+            .setCustomId('반복재생')
             .setStyle('Danger');
 
         const np = new ButtonBuilder()
             .setLabel('Now Playing')
-            .setCustomId('nowplaying')
+            .setCustomId('재생정보')
             .setStyle('Secondary');
 
         const queuebutton = new ButtonBuilder()
-            .setLabel('Queue')
-            .setCustomId('queue')
+            .setLabel('대기열가져오기')
+            .setCustomId('대기열가져오기')
             .setStyle('Secondary');
 
         const lyrics = new ButtonBuilder()
-            .setLabel('lyrics')
-            .setCustomId('Lyrics')
+            .setLabel('가사')
+            .setCustomId('가사')
             .setStyle('Primary');
 
         const shuffle = new ButtonBuilder()
-            .setLabel('Shuffle')
-            .setCustomId('shuffle')
+            .setLabel('섞기')
+            .setCustomId('섞기')
             .setStyle('Success');
 
         const stop = new ButtonBuilder()
-            .setLabel('Stop')
-            .setCustomId('stop')
+            .setLabel('멈춤')
+            .setCustomId('멈춤')
             .setStyle('Danger');
 
         const row1 = new ActionRowBuilder().addComponents(back, resumepause, skip, stop, save);

@@ -3,13 +3,13 @@ const { QueryType, useMainPlayer } = require('discord-player');
 const { Translate } = require('../../process_tools');
 
 module.exports = {
-    name: 'search',
-    description: 'Search a song',
+    name: '검색',
+    description: '음악을 검색합니다',
     voiceChannel: true,
     options: [
         {
-            name: 'song',
-            description:('The song you want to search'),
+            name: '음악',
+            description:('음악을 검색합니다'),
             type: ApplicationCommandOptionType.String,
             required: true,
         }
@@ -17,7 +17,7 @@ module.exports = {
 
     async execute({ client, inter }) {
         const player = useMainPlayer();
-        const song = inter.options.getString('song');
+        const song = inter.options.getString('음악');
 
         const res = await player.search(song, {
             requestedBy: inter.member,
@@ -49,7 +49,7 @@ module.exports = {
         const collector = inter.channel.createMessageCollector({
             time: 15000,
             max: 1,
-            errors: ['time'],
+            errors: ['시간'],
             filter: m => m.author.id === inter.member.id
         });
 
@@ -79,7 +79,7 @@ module.exports = {
         });
 
         collector.on('end', async (msg, reason) => {
-            if (reason === 'time') return inter.followUp({ content: await Translate(`Search timed out <${inter.member}>... try again ? <❌>`), ephemeral: true });
+            if (reason === '시간') return inter.followUp({ content: await Translate(`Search timed out <${inter.member}>... try again ? <❌>`), ephemeral: true });
         });
     }
 }

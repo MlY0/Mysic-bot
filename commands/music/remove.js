@@ -3,18 +3,18 @@ const { useMainPlayer, useQueue } = require('discord-player');
 const { Translate } = require('../../process_tools');
 
 module.exports = {
-    name: 'remove',
-    description: "remove a song from the queue",
+    name: '제거',
+    description: "대기열에서 음악을 제거합니다",
     voiceChannel: true,
     options: [
         {
-            name: 'song',
+            name: '음악',
             description:('the name/url of the track you want to remove'),
             type: ApplicationCommandOptionType.String,
             required: false,
         },
         {
-            name: 'number',
+            name: '번호',
             description:('the place in the queue the song is in'),
             type: ApplicationCommandOptionType.Number,
             required: false,
@@ -25,8 +25,8 @@ module.exports = {
         const queue = useQueue(inter.guild);
         if (!queue?.isPlaying()) return inter.editReply({ content: await Translate(`No music currently playing <${inter.member}>... try again ? <❌>`) });
 
-        const number = inter.options.getNumber('number');
-        const track = inter.options.getString('song');
+        const number = inter.options.getNumber('번호');
+        const track = inter.options.getString('음악');
         if (!track && !number) inter.editReply({ content: await Translate(`You have to use one of the options to remove a song <${inter.member}>... try again ? <❌>`) });
 
         let trackName;
