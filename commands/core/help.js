@@ -2,8 +2,8 @@ const { EmbedBuilder } = require('discord.js');
 const { Translate } = require('../../process_tools');
 
 module.exports = {
-    name: 'help',
-    description:("All the commands this bot has!"),
+    name: '명령어',
+    description:("미봇이 가지고있는 모든 명령어 출력"),
     showHelp: false,
 
     async execute({ client, inter }) {

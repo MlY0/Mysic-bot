@@ -4,7 +4,7 @@ const { useQueue } = require('discord-player');
 const { Translate } = require('../../process_tools');
 
 module.exports = {
-    name: 'seek',
+    name: '넘기기',
     description: '노래를 뒤로 감거나 앞으로 넘기기',
     voiceChannel: true,
     options: [

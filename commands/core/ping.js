@@ -2,8 +2,8 @@ const ms = require('ms');
 const { Translate } = require('../../process_tools');
 
 module.exports = {
-    name: 'ping',
-    description:("Get the ping of the bot!"),
+    name: '핑',
+    description:("퐁!"),
 
     async execute({ client, inter }) {
         await inter.editReply("Ping?");
